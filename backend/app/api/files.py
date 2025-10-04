@@ -158,26 +158,57 @@ async def analyze_file(file_id: str):
         if len(content) > 3000:
             content = content[:3000] + "..."
         
-        # Analyze with OpenAI
+        # Analyze with OpenRouter (primary) or OpenAI (fallback)
         try:
             import openai
-            client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
             
-            response = client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=[
-                    {
-                        "role": "system", 
-                        "content": "You are a NASA space research analyst. Analyze the provided document and extract key insights, research findings, and significant discoveries. Focus on space exploration, scientific discoveries, and research methodologies."
-                    },
-                    {
-                        "role": "user", 
-                        "content": f"Analyze this document and provide:\n1. A comprehensive summary\n2. Key research findings\n3. Significant discoveries or insights\n4. Research methodology used\n5. Potential applications in space exploration\n\nDocument content:\n{content}"
+            # Try OpenRouter first
+            try:
+                client = openai.OpenAI(
+                    api_key=settings.OPENROUTER_API_KEY,
+                    base_url=settings.OPENROUTER_BASE_URL,
+                    default_headers={
+                        "HTTP-Referer": "https://biospacesearch.com",
+                        "X-Title": "BioSpaceSearch AI Platform"
                     }
-                ],
-                max_tokens=800,
-                temperature=0.7
-            )
+                )
+                
+                response = client.chat.completions.create(
+                    model=settings.OPENROUTER_MODEL,
+                    messages=[
+                        {
+                            "role": "system", 
+                            "content": "Ты - эксперт по космическим исследованиям NASA. Проанализируй предоставленный документ и извлеки ключевые инсайты, научные открытия и значимые находки. Сосредоточься на космических исследованиях, научных открытиях и методологиях исследований. Отвечай на русском языке."
+                        },
+                        {
+                            "role": "user", 
+                            "content": f"Проанализируй этот документ и предоставь:\n1. Подробное резюме\n2. Ключевые научные находки\n3. Значимые открытия или инсайты\n4. Использованная методология исследований\n5. Потенциальные применения в космических исследованиях\n6. Дополнительную информацию, которую можно извлечь из документа\n\nСодержимое документа:\n{content}"
+                        }
+                    ],
+                    max_tokens=1000,
+                    temperature=0.7
+                )
+                
+            except Exception as openrouter_error:
+                print(f"OpenRouter analysis error: {openrouter_error}")
+                # Fallback to OpenAI
+                client = openai.OpenAI(api_key=settings.OPENAI_API_KEY)
+                
+                response = client.chat.completions.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {
+                            "role": "system", 
+                            "content": "You are a NASA space research analyst. Analyze the provided document and extract key insights, research findings, and significant discoveries. Focus on space exploration, scientific discoveries, and research methodologies."
+                        },
+                        {
+                            "role": "user", 
+                            "content": f"Analyze this document and provide:\n1. A comprehensive summary\n2. Key research findings\n3. Significant discoveries or insights\n4. Research methodology used\n5. Potential applications in space exploration\n\nDocument content:\n{content}"
+                        }
+                    ],
+                    max_tokens=800,
+                    temperature=0.7
+                )
             
             ai_analysis = response.choices[0].message.content
             

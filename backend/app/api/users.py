@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from app.api.auth import oauth2_scheme, fake_users_db
 from app.core.config import settings
 from datetime import datetime
-from jose import JWTError, jwt
+from jose import JWTError
+from jose import jwt
 
 router = APIRouter()
 

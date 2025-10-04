@@ -18,11 +18,16 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 24 hours
     
-    # OpenAI
-    OPENAI_API_KEY: str = "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"
+    # OpenAI (fallback)
+    OPENAI_API_KEY: str = "your-openai-api-key-here"
+    
+    # OpenRouter (primary) - FREE API
+    OPENROUTER_API_KEY: str = "your-openrouter-api-key-here"
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
+    OPENROUTER_MODEL: str = "google/gemma-2-9b-it:free"
     
     # Pinecone
-    PINECONE_API_KEY: str = "pcsk_2Su7CE_4pbgCQUcGrvTPixWhMZfgkgcpPJDJQjjomaxUC5UEaHsc3UTpcYee2TwurcZnwn"
+    PINECONE_API_KEY: str = "your-pinecone-api-key-here"
     PINECONE_ENVIRONMENT: str = "us-west1-gcp"
     
     # File Storage
