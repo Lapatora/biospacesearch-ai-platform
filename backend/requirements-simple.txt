@@ -1,0 +1,11 @@
+# Простые зависимости без проблемных пакетов
+fastapi
+uvicorn[standard]
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+pydantic-settings
+python-dotenv
+aiofiles
+httpx
