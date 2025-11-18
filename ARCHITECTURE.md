@@ -37,7 +37,7 @@ System architecture documentation.
 
 ---
 
-## � **Frontend Architecture**
+##  **Frontend Architecture**
 
 ### Component Structure
 
