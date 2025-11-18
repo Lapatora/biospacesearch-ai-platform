@@ -2,12 +2,6 @@
 # BioSpaceSearch AI Platform
 
 AI platform for space research — a modern web application for analyzing space-related data using artificial intelligence.
-About:
-<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 58 PM" src="https://github.com/user-attachments/assets/f6cae421-ecce-479b-a370-adf502ef26d4" />
-
-
-
-
 
 ---
 
@@ -20,6 +14,41 @@ About:
 * Data Analysis — AI automatically analyzes uploaded files
 
 ---
+
+
+
+##  Application Preview
+
+
+
+###  Registration
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 58 PM" src="https://github.com/user-attachments/assets/015c237f-ee25-4472-bbb4-e5f18ba23a51" />
+
+
+###  AI Chat
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 43 PM" src="https://github.com/user-attachments/assets/010a93a8-b79f-4ab0-bba6-b1ec8c27b75f" />
+
+
+###  Profile
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 46 PM" src="https://github.com/user-attachments/assets/08e44c65-72c4-4ba8-8caa-e5490fc6fa9a" />
+
+
+###  Dashboard
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 34 PM" src="https://github.com/user-attachments/assets/ddd24739-ed59-4b1f-a398-858b2a4b142f" />
+
+
+###  Theme Modes (Light / Dark)
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 46 PM" src="https://github.com/user-attachments/assets/42618b13-22f8-4e5a-825e-8cd7dc21d640" />
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 52 PM" src="https://github.com/user-attachments/assets/50e1f973-527b-458c-8e05-6221f8ae11a4" />
+
+
+### � File Upload
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 38 PM" src="https://github.com/user-attachments/assets/28d67670-9bf6-4909-8228-b1e84142c2a4" />
+
+
+
+
+
 
 ## Quick Start
 
