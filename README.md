@@ -2,6 +2,12 @@
 # BioSpaceSearch AI Platform
 
 AI platform for space research — a modern web application for analyzing space-related data using artificial intelligence.
+About:
+<img width="1470" height="956" alt="Снимок экрана 2025-11-18 в 2 19 58 PM" src="https://github.com/user-attachments/assets/f6cae421-ecce-479b-a370-adf502ef26d4" />
+
+
+
+
 
 ---
 
