@@ -101,7 +101,7 @@ Get current user info
 
 ---
 
-## 📁 File Management Endpoints
+## File Management Endpoints
 
 ### **GET** `/api/files`
 
@@ -208,7 +208,7 @@ Analyze file using AI
 
 ---
 
-## 💬 AI Chat Endpoints
+## AI Chat Endpoints
 
 ### **POST** `/api/chat/message`
 
