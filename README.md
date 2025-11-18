@@ -1,93 +1,125 @@
+
 # BioSpaceSearch AI Platform
 
-🚀 **AI-платформа для космических исследований** - современное веб-приложение для анализа космических данных с помощью искусственного интеллекта.
+AI platform for space research — a modern web application for analyzing space-related data using artificial intelligence.
 
-## ✨ Возможности
+---
 
-- 🤖 **AI Чат** - общение с ИИ на русском языке
-- 📁 **Управление файлами** - загрузка и анализ документов
-- 👤 **Профиль пользователя** - персонализированные настройки
-- 👥 **Командная работа** - совместная работа над проектами
-- 🔍 **Анализ данных** - ИИ анализирует загруженные файлы
+## Features
 
-## 🚀 Быстрый запуск
+* AI Chat — interact with the AI assistant
+* File Management — upload and analyze documents
+* User Profile — personalized settings
+* Team Collaboration — work together on shared projects
+* Data Analysis — AI automatically analyzes uploaded files
 
-### Требования
-- Node.js 18+
-- Python 3.8+
-- Git
+---
 
-### Установка и запуск
+## Quick Start
 
-1. **Клонируйте репозиторий:**
+### Requirements
+
+```
+Node.js 18+
+Python 3.8+
+Git
+```
+
+### Installation & Launch
+
+Clone the repository:
+
 ```bash
 git clone <your-repo-url>
 cd nasa-space-apps-ai-platform
 ```
 
-2. **Запустите проект:**
+Run the project:
+
 ```bash
 ./start.sh
 ```
 
-3. **Откройте в браузере:**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Docs: http://localhost:8000/docs
+Open in browser:
 
-## 📁 Структура проекта
+* Frontend: [http://localhost:3000](http://localhost:3000)
+* Backend API: [http://localhost:8000](http://localhost:8000)
+* API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+
+---
+
+## Project Structure
 
 ```
-├── frontend/          # React приложение
-├── backend/           # FastAPI сервер
-├── start.sh          # Скрипт запуска
-└── README.md         # Документация
+├── frontend/          # React application
+├── backend/           # FastAPI server
+├── start.sh           # Startup script
+└── README.md          # Documentation
 ```
 
-## 🛠 Технологии
+---
 
-**Frontend:**
-- React 18 + TypeScript
-- Tailwind CSS
-- React Router
+## Technologies
 
-**Backend:**
-- FastAPI (Python)
-- OpenRouter AI API
-- SQLite база данных
+### Frontend
 
-## 📝 Использование
+* React 18 + TypeScript
+* Tailwind CSS
+* React Router
 
-1. **Регистрация** - создайте аккаунт
-2. **Загрузка файлов** - добавьте документы для анализа
-3. **AI Чат** - общайтесь с ИИ о космических исследованиях
-4. **Анализ данных** - ИИ анализирует ваши файлы
+### Backend
 
-## 🔧 Настройка
+* FastAPI (Python)
+* OpenRouter AI API
+* SQLite database
 
-### API ключи
-1. Создайте файл `.env` в корне проекта
-2. Добавьте ваши API ключи:
-```env
+---
+
+## Usage
+
+1. Sign up — create a new account
+2. File Upload — add documents for AI processing
+3. AI Chat — discuss space-related topics with AI
+4. Data Analysis — AI will analyze your uploaded files
+
+---
+
+## Configuration
+
+### API Keys
+
+Create a `.env` file in the project root and add your keys:
+
+```
 OPENROUTER_API_KEY=sk-or-v1-your-key-here
 OPENAI_API_KEY=sk-proj-your-key-here
 PINECONE_API_KEY=your-pinecone-key-here
 ```
 
-Подробная инструкция: [API_KEYS_SETUP.md](API_KEYS_SETUP.md)
+Detailed instructions: `API_KEYS_SETUP.md`
 
-### Порт
-По умолчанию:
-- Frontend: 3000
-- Backend: 8000
+### Ports
 
-## 📞 Поддержка
+Default ports:
 
-При возникновении проблем:
-1. Проверьте, что порты 3000 и 8000 свободны
-2. Убедитесь, что установлены все зависимости
-3. Перезапустите проект: `./start.sh`
+* Frontend: 3000
+* Backend: 8000
 
 ---
 
-**BioSpaceSearch** - Исследуйте космос с помощью ИИ! 🌌
+## Support
+
+If you encounter issues:
+
+1. Make sure ports **3000** and **8000** are not in use
+2. Verify all dependencies are installed
+3. Restart the project using:
+
+   ```bash
+   ./start.sh
+   ```
+
+---
+
+BioSpaceSearch — explore space with the power of AI!
+
